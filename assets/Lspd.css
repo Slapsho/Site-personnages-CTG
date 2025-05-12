@@ -1,0 +1,330 @@
+/* styles.css - Thème policier pour le profil */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d3a4b 100%);
+    color: #e8e8e8;
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Bande police en haut */
+.police-tape {
+    background: repeating-linear-gradient(
+        45deg,
+        #fff100,
+        #fff100 20px,
+        #000 20px,
+        #000 40px
+    );
+    height: 4px;
+    position: relative;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+/* Scanner overlay effet */
+.scanner-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        to bottom,
+        transparent 0px,
+        transparent 2px,
+        rgba(0, 255, 0, 0.05) 2px,
+        rgba(0, 255, 0, 0.05) 4px
+    );
+    pointer-events: none;
+    animation: scanlines 0.1s linear infinite;
+    z-index: 1000;
+}
+
+@keyframes scanlines {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 4px; }
+}
+
+/* En-tête avec effet badge */
+header {
+    background: linear-gradient(to right, #2c3e50, #34495e);
+    padding: 2rem 0;
+    text-align: center;
+    position: relative;
+    border-bottom: 3px solid #f1c40f;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><polygon points="50,10 60,35 90,35 70,55 80,80 50,65 20,80 30,55 10,35 40,35" fill="rgba(255,255,255,0.02)"/></svg>');
+    background-size: 50px 50px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
+}
+
+h2 {
+    color: #f1c40f;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Section principale */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Section profil */
+.profile-section {
+    background: rgba(30, 30, 30, 0.9);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid #555;
+    backdrop-filter: blur(10px);
+    position: relative;
+}
+
+.profile-section::before {
+    content: "CONFIDENTIEL";
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background: #c0392b;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transform: rotate(-5deg);
+}
+
+/* Photo de profil avec cadre officiel */
+img.portrait {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    border: 5px solid #2c3e50;
+    border-radius: 5px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    float: left;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+    filter: sepia(20%) contrast(120%);
+}
+
+/* Informations du profil */
+.profile-info {
+    background: rgba(20, 20, 20, 0.8);
+    padding: 1.5rem;
+    border-radius: 5px;
+    border-left: 4px solid #f1c40f;
+}
+
+.profile-info p {
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.profile-info strong {
+    color: #f1c40f;
+    width: 150px;
+    display: inline-block;
+}
+
+/* Badge et matricule */
+.badge-number {
+    background: linear-gradient(45deg, #2c3e50, #34495e);
+    color: #f1c40f;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Section historique */
+.bio {
+    background: rgba(34, 34, 34, 0.9);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid #555;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+.bio h3 {
+    color: #f1c40f;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.bio h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #f1c40f;
+}
+
+/* Section notes */
+.notes {
+    background: rgba(25, 25, 25, 0.9);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid #555;
+    border-left: 4px solid #c0392b;
+    margin-bottom: 2rem;
+}
+
+.notes h3 {
+    color: #c0392b;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.notes ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.notes li {
+    padding: 0.5rem 0;
+    border-bottom: 1px dotted #555;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.notes li::before {
+    content: "▪";
+    color: #c0392b;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(to right, #2c3e50, #34495e);
+    text-align: center;
+    padding: 1.5rem;
+    color: #bdc3c7;
+    border-top: 3px solid #f1c40f;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* Effets de texte pour les éléments importants */
+.classified {
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(192, 57, 43, 0.1),
+        rgba(192, 57, 43, 0.1) 10px,
+        transparent 10px,
+        transparent 20px
+    );
+    padding: 1rem;
+    border: 2px dashed #c0392b;
+    margin: 1rem 0;
+    border-radius: 5px;
+}
+
+/* Animation de clignotement pour les éléments urgents */
+.urgent {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0.5; }
+}
+
+/* Style pour le matricule/badge */
+.badge-info {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin: 1rem 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    img.portrait {
+        width: 150px;
+        height: 190px;
+        float: none;
+        display: block;
+        margin: 0 auto 1rem;
+    }
+    
+    .profile-info {
+        text-align: center;
+    }
+    
+    .profile-info strong {
+        width: auto;
+        display: block;
+        margin-bottom: 0.25rem;
+    }
+}
+
+/* Effet de machine à écrire pour certains textes */
+.typewriter {
+    overflow: hidden;
+    border-right: 2px solid #f1c40f;
+    white-space: nowrap;
+    animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+    max-width: 100%;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #f1c40f; }
+}
