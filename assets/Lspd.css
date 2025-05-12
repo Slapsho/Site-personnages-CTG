@@ -1,4 +1,4 @@
-/* styles.css - Thème policier pour le profil */
+/* Lspd.css - Portfolio Marc Priox */
 
 * {
     margin: 0;
@@ -7,64 +7,20 @@
 }
 
 body {
-    font-family: 'Courier New', monospace;
-    background: linear-gradient(135deg, #1a1a1a 0%, #2d3a4b 100%);
-    color: #e8e8e8;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f8fc;
+    color: #333;
     line-height: 1.6;
-    overflow-x: hidden;
-    position: relative;
 }
 
-/* Bande police en haut */
-.police-tape {
-    background: repeating-linear-gradient(
-        45deg,
-        #fff100,
-        #fff100 20px,
-        #000 20px,
-        #000 40px
-    );
-    height: 4px;
-    position: relative;
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.7; }
-}
-
-/* Scanner overlay effet */
-.scanner-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: repeating-linear-gradient(
-        to bottom,
-        transparent 0px,
-        transparent 2px,
-        rgba(0, 255, 0, 0.05) 2px,
-        rgba(0, 255, 0, 0.05) 4px
-    );
-    pointer-events: none;
-    animation: scanlines 0.1s linear infinite;
-    z-index: 1000;
-}
-
-@keyframes scanlines {
-    0% { background-position: 0 0; }
-    100% { background-position: 0 4px; }
-}
-
-/* En-tête avec effet badge */
+/* En-tête */
 header {
-    background: linear-gradient(to right, #2c3e50, #34495e);
-    padding: 2rem 0;
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    color: white;
+    padding: 4rem 0;
     text-align: center;
     position: relative;
-    border-bottom: 3px solid #f1c40f;
+    overflow: hidden;
 }
 
 header::before {
@@ -74,257 +30,540 @@ header::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><polygon points="50,10 60,35 90,35 70,55 80,80 50,65 20,80 30,55 10,35 40,35" fill="rgba(255,255,255,0.02)"/></svg>');
-    background-size: 50px 50px;
+    background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nNTAwJyBoZWlnaHQ9JzUwMCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48ZGVmcz48cGF0dGVybiBpZD0nZ3JpZCcgd2lkdGg9JzUwJyBoZWlnaHQ9JzUwJyBwYXR0ZXJuVW5pdHM9J3VzZXJTcGFjZU9uVXNlJz48cGF0aCBkPSdNIDUwIDAgTCAwIDAgMCA1MCcgZmlsbD0nbm9uZScgc3Ryb2tlPSdyZ2JhKDI1NSwyNTUsMjU1LDAuMDUpJyBzdHJva2Utd2lkdGg9JzEuNScvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9JzEwMCUnIGhlaWdodD0nMTAwJScgZmlsbD0ndXJsKCNncmlkKScvPjwvc3ZnPg==') repeat;
+    opacity: 0.1;
 }
 
 h1 {
-    font-size: 2.5rem;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
     position: relative;
     z-index: 1;
 }
 
-h2 {
-    color: #f1c40f;
+header p {
     font-size: 1.2rem;
-    margin-top: 0.5rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    opacity: 0.9;
+    font-weight: 300;
     position: relative;
     z-index: 1;
 }
 
-/* Section principale */
+/* Main container */
 main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
 }
 
-/* Section profil */
+/* Section Description */
 .profile-section {
-    background: rgba(30, 30, 30, 0.9);
-    border-radius: 10px;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    border: 1px solid #555;
-    backdrop-filter: blur(10px);
-    position: relative;
-}
-
-.profile-section::before {
-    content: "CONFIDENTIEL";
-    position: absolute;
-    top: -15px;
-    right: 20px;
-    background: #c0392b;
-    color: white;
-    padding: 0.5rem 1rem;
-    font-size: 0.8rem;
-    font-weight: bold;
-    border-radius: 5px;
-    transform: rotate(-5deg);
-}
-
-/* Photo de profil avec cadre officiel */
-img.portrait {
-    width: 200px;
-    height: 250px;
-    object-fit: cover;
-    border: 5px solid #2c3e50;
-    border-radius: 5px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    float: left;
-    margin-right: 2rem;
-    margin-bottom: 1rem;
-    filter: sepia(20%) contrast(120%);
-}
-
-/* Informations du profil */
-.profile-info {
-    background: rgba(20, 20, 20, 0.8);
-    padding: 1.5rem;
-    border-radius: 5px;
-    border-left: 4px solid #f1c40f;
-}
-
-.profile-info p {
-    margin: 0.5rem 0;
-    display: flex;
-    align-items: center;
-}
-
-.profile-info strong {
-    color: #f1c40f;
-    width: 150px;
-    display: inline-block;
-}
-
-/* Badge et matricule */
-.badge-number {
-    background: linear-gradient(45deg, #2c3e50, #34495e);
-    color: #f1c40f;
-    padding: 0.5rem 1rem;
+    background: white;
     border-radius: 20px;
-    font-weight: bold;
-    text-align: center;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 3rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e5e7eb;
 }
 
-/* Section historique */
-.bio {
-    background: rgba(34, 34, 34, 0.9);
-    padding: 2rem;
-    border-radius: 10px;
-    border: 1px solid #555;
+.profile-section h2 {
+    font-size: 2.5rem;
+    color: #4f46e5;
     margin-bottom: 2rem;
-    backdrop-filter: blur(10px);
+    font-weight: 600;
 }
 
-.bio h3 {
-    color: #f1c40f;
-    font-size: 1.5rem;
+.description-content {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.portrait-container {
+    flex-shrink: 0;
+}
+
+.portrait {
+    width: 280px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(79, 70, 229, 0.2);
+    transition: all 0.3s ease;
+    border: 4px solid #f3f4f6;
+}
+
+.portrait:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(79, 70, 229, 0.3);
+}
+
+.bio-container {
+    flex: 1;
+}
+
+.personal-info {
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    border-left: 5px solid #4f46e5;
+}
+
+.personal-info h3 {
+    color: #4f46e5;
+    font-size: 1.4rem;
     margin-bottom: 1rem;
-    position: relative;
+    font-weight: 600;
 }
 
-.bio h3::after {
+.personal-info ul {
+    list-style: none;
+}
+
+.personal-info li {
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+}
+
+.personal-info strong {
+    color: #4f46e5;
+    font-weight: 600;
+}
+
+.bio-text {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid #e5e7eb;
+}
+
+.bio-text h3 {
+    color: #374151;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.bio-text p {
+    margin-bottom: 1rem;
+    color: #6b7280;
+    line-height: 1.7;
+}
+
+/* Section Travaux */
+.work-section {
+    background: white;
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e5e7eb;
+}
+
+.work-section h2 {
+    font-size: 2.5rem;
+    color: #4f46e5;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.project-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 15px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card::before {
     content: '';
     position: absolute;
-    bottom: -5px;
+    top: 0;
     left: 0;
-    width: 50px;
-    height: 2px;
-    background: #f1c40f;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #4f46e5, #7c3aed);
 }
 
-/* Section notes */
-.notes {
-    background: rgba(25, 25, 25, 0.9);
-    padding: 2rem;
-    border-radius: 10px;
-    border: 1px solid #555;
-    border-left: 4px solid #c0392b;
-    margin-bottom: 2rem;
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-color: #4f46e5;
 }
 
-.notes h3 {
-    color: #c0392b;
-    font-size: 1.3rem;
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 1rem;
 }
 
-.notes ul {
-    list-style: none;
-    padding-left: 0;
+.project-header h3 {
+    color: #374151;
+    font-size: 1.3rem;
+    font-weight: 600;
 }
 
-.notes li {
-    padding: 0.5rem 0;
-    border-bottom: 1px dotted #555;
-    position: relative;
-    padding-left: 1.5rem;
+.project-type {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
 }
 
-.notes li::before {
-    content: "▪";
-    color: #c0392b;
-    font-size: 1.2rem;
-    position: absolute;
-    left: 0;
+.project-content p {
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech {
+    background: #f1f5f9;
+    color: #4f46e5;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid #e2e8f0;
+}
+
+/* Section Réalisations */
+.achievements-summary {
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.achievements-summary h3 {
+    color: #4f46e5;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.achievement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.achievement-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #4f46e5;
+    margin-bottom: 0.5rem;
+}
+
+.achievement-label {
+    color: #6b7280;
+    font-size: 0.95rem;
+    font-weight: 500;
 }
 
 /* Footer */
 footer {
-    background: linear-gradient(to right, #2c3e50, #34495e);
+    background: #374151;
+    color: white;
     text-align: center;
-    padding: 1.5rem;
-    color: #bdc3c7;
-    border-top: 3px solid #f1c40f;
+    padding: 2rem;
+    margin-top: 3rem;
+    border-radius: 20px 20px 0 0;
 }
 
 footer p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    font-weight: 300;
 }
 
-/* Effets de texte pour les éléments importants */
-.classified {
-    background: repeating-linear-gradient(
-        45deg,
-        rgba(192, 57, 43, 0.1),
-        rgba(192, 57, 43, 0.1) 10px,
-        transparent 10px,
-        transparent 20px
-    );
-    padding: 1rem;
-    border: 2px dashed #c0392b;
-    margin: 1rem 0;
-    border-radius: 5px;
-}
-
-/* Animation de clignotement pour les éléments urgents */
-.urgent {
-    animation: blink 1s infinite;
-}
-
-@keyframes blink {
-    0%, 50% { opacity: 1; }
-    51%, 100% { opacity: 0.5; }
-}
-
-/* Style pour le matricule/badge */
-.badge-info {
-    background: linear-gradient(135deg, #2c3e50, #3498db);
-    color: white;
-    padding: 1rem;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    margin: 1rem 0;
-}
-
-/* Responsive design */
+/* Responsive Design */
 @media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    header {
+        padding: 2rem 0;
+    }
+    
+    .description-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .portrait {
+        width: 220px;
+        height: 280px;
+        margin: 0 auto;
+    }
+    
+    .profile-section,
+    .work-section {
+        padding: 2rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    main {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
     h1 {
         font-size: 2rem;
     }
     
-    img.portrait {
-        width: 150px;
-        height: 190px;
-        float: none;
-        display: block;
-        margin: 0 auto 1rem;
+    .portrait {
+        width: 200px;
+        height: 250px;
     }
     
-    .profile-info {
-        text-align: center;
+    .project-header {
+        flex-direction: column;
+        align-items: start;
+        gap: 0.5rem;
     }
     
-    .profile-info strong {
-        width: auto;
-        display: block;
-        margin-bottom: 0.25rem;
+    .achievements-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Effet de machine à écrire pour certains textes */
-.typewriter {
+/* Animations */
+.profile-section,
+.work-section {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project-card {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover effects */
+.tech:hover {
+    background: #4f46e5;
+    color: white;
+    cursor: default;
+}
+
+/* Scroll smooth */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Amélioration du focus et de l'accessibilité */
+.filter-btn:focus {
+    outline: 3px solid rgba(79, 70, 229, 0.5);
+    outline-offset: 2px;
+}
+
+/* Animation de pulsation pour les réalisations */
+.achievement-number {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Effet de brillance sur les cartes de projet au survol */
+.project-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.project-card:hover::after {
+    left: 100%;
+}
+
+/* Animation de rotation pour les éléments tech */
+.tech {
+    position: relative;
     overflow: hidden;
-    border-right: 2px solid #f1c40f;
-    white-space: nowrap;
-    animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
-    max-width: 100%;
 }
 
-@keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
+.tech::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
 }
 
-@keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { border-color: #f1c40f; }
+.tech:hover::before {
+    width: 200%;
+    height: 200%;
+}
+
+/* Amélioration de l'effet de survol sur les réalisations */
+.achievement {
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.achievement:hover {
+    transform: translateY(-5px);
+}
+
+.achievement:hover .achievement-number {
+    color: #7c3aed;
+    transform: scale(1.1);
+}
+
+/* Style pour la barre de progression du scroll */
+.scroll-progress {
+    box-shadow: 0 2px 4px rgba(79, 70, 229, 0.2);
+}
+
+/* Amélioration du bouton de mode sombre */
+.dark-mode-toggle {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Animation pour l'apparition des éléments */
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Applliquer les animations alternées aux cartes de projet */
+.project-card:nth-child(odd) {
+    animation: slideInFromLeft 0.8s ease forwards;
+}
+
+.project-card:nth-child(even) {
+    animation: slideInFromRight 0.8s ease forwards;
+}
+
+/* Amélioration des transitions pour le mode sombre */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Style spécial pour les éléments en focus (accessibilité) */
+*:focus {
+    outline: 2px solid #4f46e5;
+    outline-offset: 2px;
+}
+
+/* Effet de zoom sur la photo de profil */
+.portrait {
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.portrait:hover {
+    transform: scale(1.05) rotate(2deg);
+}
+
+/* Amélioration de l'effet de hover sur les infos personnelles */
+.personal-info {
+    transition: all 0.3s ease;
+}
+
+.personal-info:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(79, 70, 229, 0.1);
+}
+
+/* Style pour les particules du header */
+.particles {
+    overflow: hidden;
+}
+
+/* Amélioration du footer avec un effet de vague */
+footer {
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTAwJyBoZWlnaHQ9JzIwJyB2aWV3Qm94PScwIDAgMTAwIDIwJyBmaWxsPSdub25lJyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnPjxwYXRoIGQ9J00wIDEwUzI1IDAgNTAgMTBTMTAwIDAgMTAwIDEwVjIwSDBWMTBaJyBmaWxsPScjZjdmOGZjJy8+PC9zdmc+') repeat-x;
+    transform: scaleY(-1);
 }

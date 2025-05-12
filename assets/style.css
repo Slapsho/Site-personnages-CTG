@@ -496,3 +496,34 @@ body {
     50% { transform: translate(-50px, -20px); }
     100% { transform: translate(0, 0px); }
 }
+
+/* Dark Mode Styles */
+body.dark-mode {
+    --bg-primary: #000;
+    --bg-secondary: #111;
+    --text-light: #ddd;
+    --accent-gold: #ffc107;
+    --accent-red: #e74c3c;
+    --glow-primary: rgba(255, 193, 7, 0.3);
+}
+
+/* Bouton dark mode */
+#darkModeToggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: var(--bg-secondary);
+    border: 2px solid var(--accent-gold);
+    color: var(--accent-gold);
+    padding: 0.5rem;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 10000;
+    transition: background 0.3s ease;
+}
+
+#darkModeToggle:hover {
+    background: var(--accent-gold);
+    color: var(--bg-primary);
+}
