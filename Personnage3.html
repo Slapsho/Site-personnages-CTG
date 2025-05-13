@@ -2,47 +2,143 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Inspecteur John Doe</title>
-  <link rel="stylesheet" href="assets/orga.css">
-  <script src="../js/script.js" defer></script>
+  <title>Marc Priox - Portfolio</title>
+  <link rel="stylesheet" href="assets/Lspd.css">
+  <script src="character.js" defer></script>
 </head>
-<body class="police-theme">
-  <div class="scanner-overlay"></div>
-
+<body>
   <header>
-    <h1>Dossier Officiel - LSPD</h1>
-    <h2>Marc Priox</h2>
+    <h1>Marc Priox</h1>
+    <p>Personnage Lspd et légal</p>
   </header>
 
   <main>
+    <!-- Section Description -->
     <section class="profile-section">
-      <img src="assets/image/Capture d'écran 2025-03-31 161433.png" alt="Photo de John Doe" class="portrait">
-      <div class="info">
-        <p><strong>Matricule :</strong> #LSPD-0423</p>
-        <p><strong>Grade :</strong> Inspecteur Principal</p>
-        <p><strong>Unité :</strong> Crimes Majeurs</p>
-        <p><strong>Statut :</strong> Actif</p>
-        <p><strong>Dernière Mission :</strong> Opération Nocturne - Quartier East Vinewood</p>
+      <h2>À propos de moi</h2>
+      <div class="description-content">
+        <div class="portrait-container">
+          <img src="assets/image/Capture d'écran 2025-03-31 161433.png" alt="Photo de Marc Priox" class="portrait">
+        </div>
+        <div class="bio-container">
+          <div class="personal-info">
+            <h3>Informations générales</h3>
+            <ul>
+              <li><strong>Poste actuel :</strong> LSPD / SAS / Distillerie</li>
+              <li><strong>Localisation :</strong> Paris, France</li>
+              <li><strong>Expérience :</strong> Plusieurs années</li>
+              <li><strong>Specialités :</strong> Sociabilité</li>
+            </ul>
+          </div>
+          <div class="bio-text">
+            <h3>Présentation : </h3>
+            <p>En écriture!!!</p>
+            <p></p>
+          </div>
+          <br>
+              <div class="bio-text">
+                <h3>Qualités/défauts : </h3>
+                <p>En écriture!!!</p>
+                <p></p>
+              </div>
+        </div>
       </div>
     </section>
 
-    <section class="bio">
-      <h3>Historique</h3>
-      <p>Ancien militaire reconverti en enquêteur. Spécialisé dans les infiltrations à haut risque. Froid, méthodique, respecté même par ses ennemis.</p>
-    </section>
+    <!-- Section job -->
+    <section class="work-section">
+      <h2>Mes Travails / activités</h2>
+      
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Application E-commerce</h3>
+            <span class="project-type">Full-Stack</span>
+          </div>
+          <div class="project-content">
+            <p>Développement d'une plateforme e-commerce complète avec React et Node.js. Intégration de paiements sécurisés, gestion d'inventaire en temps réel, et dashboard administrateur.</p>
+          </div>
+        </div>
 
-    <section class="notes">
-      <h3>Notes internes</h3>
-      <ul>
-        <li>Dossier disciplinaire vierge</li>
-        <li>Suspecté d'agir en solo sur certaines affaires</li>
-        <li>Évalué “dangereusement efficace” par l'IA centrale</li>
-      </ul>
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Système de Gestion RH</h3>
+            <span class="project-type">Enterprise</span>
+          </div>
+          <div class="project-content">
+            <p>Conception et développement d'un système RH complet pour une entreprise de 500+ employés. Gestion des congés, évaluations, formations et workflows automatisés.</p>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <h3>API Microservices</h3>
+            <span class="project-type">Architecture</span>
+          </div>
+          <div class="project-content">
+            <p>Refactoring d'un monolithe vers une architecture microservices. Mise en place de l'API Gateway, service discovery, et monitoring distribué.</p>
+
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Dashboard Analytics</h3>
+            <span class="project-type">Data Viz</span>
+          </div>
+          <div class="project-content">
+            <p>Création d'un dashboard interactif de visualisation de données en temps réel. Traitement de millions de points de données avec des graphiques dynamiques.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Application Mobile</h3>
+            <span class="project-type">Mobile</span>
+          </div>
+          <div class="project-content">
+            <p>Développement d'une application mobile cross-platform pour la gestion de tâches collaboratives. Synchronisation offline/online et notifications push.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <h3>IA & Machine Learning</h3>
+            <span class="project-type">AI/ML</span>
+          </div>
+          <div class="project-content">
+            <p>Implémentation d'un système de recommandation basé sur l'IA et développement d'un chatbot intelligent pour le support client automatisé.</p>
+        </div>
+      </div>
+
+      <div class="achievements-summary">
+        <h3>Informations supplémentaires</h3>
+        <div class="achievements-grid">
+          <div class="achievement">
+            <span class="achievement-number">365</span>
+            <span class="achievement-label">D'ancienneté LSPD/SAST </span>
+          </div>
+          <div class="achievement">
+            <span class="achievement-number">2000+</span>
+            <span class="achievement-label">Heures de jeux</span>
+          </div>
+          <div class="achievement">
+            <span class="achievement-number">100+</span>
+            <span class="achievement-label">Personnages rencontrés</span>
+          </div>
+          <div class="achievement">
+            <span class="achievement-number">51</span>
+            <span class="achievement-label">Agilité</span>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>Los Santos Police Department - Dossier confidentiel</p>
+    <p>© 2025 Marc Priox - Joueur/Helper CTG</p>
   </footer>
 </body>
 </html>
