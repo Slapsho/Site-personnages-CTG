@@ -1,0 +1,569 @@
+/* Lspd.css - Portfolio Marc Priox */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f8fc;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* En-tête */
+header {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nNTAwJyBoZWlnaHQ9JzUwMCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48ZGVmcz48cGF0dGVybiBpZD0nZ3JpZCcgd2lkdGg9JzUwJyBoZWlnaHQ9JzUwJyBwYXR0ZXJuVW5pdHM9J3VzZXJTcGFjZU9uVXNlJz48cGF0aCBkPSdNIDUwIDAgTCAwIDAgMCA1MCcgZmlsbD0nbm9uZScgc3Ryb2tlPSdyZ2JhKDI1NSwyNTUsMjU1LDAuMDUpJyBzdHJva2Utd2lkdGg9JzEuNScvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9JzEwMCUnIGhlaWdodD0nMTAwJScgZmlsbD0ndXJsKCNncmlkKScvPjwvc3ZnPg==') repeat;
+    opacity: 0.1;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    font-weight: 300;
+    position: relative;
+    z-index: 1;
+}
+
+/* Main container */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Section Description */
+.profile-section {
+    background: white;
+    border-radius: 20px;
+    padding: 3rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e5e7eb;
+}
+
+.profile-section h2 {
+    font-size: 2.5rem;
+    color: #4f46e5;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.description-content {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.portrait-container {
+    flex-shrink: 0;
+}
+
+.portrait {
+    width: 280px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(79, 70, 229, 0.2);
+    transition: all 0.3s ease;
+    border: 4px solid #f3f4f6;
+}
+
+.portrait:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(79, 70, 229, 0.3);
+}
+
+.bio-container {
+    flex: 1;
+}
+
+.personal-info {
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    border-left: 5px solid #4f46e5;
+}
+
+.personal-info h3 {
+    color: #4f46e5;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.personal-info ul {
+    list-style: none;
+}
+
+.personal-info li {
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+}
+
+.personal-info strong {
+    color: #4f46e5;
+    font-weight: 600;
+}
+
+.bio-text {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid #e5e7eb;
+}
+
+.bio-text h3 {
+    color: #374151;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.bio-text p {
+    margin-bottom: 1rem;
+    color: #6b7280;
+    line-height: 1.7;
+}
+
+/* Section Travaux */
+.work-section {
+    background: white;
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e5e7eb;
+}
+
+.work-section h2 {
+    font-size: 2.5rem;
+    color: #4f46e5;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.project-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 15px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #4f46e5, #7c3aed);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-color: #4f46e5;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.project-header h3 {
+    color: #374151;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.project-type {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.project-content p {
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech {
+    background: #f1f5f9;
+    color: #4f46e5;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid #e2e8f0;
+}
+
+/* Section Réalisations */
+.achievements-summary {
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.achievements-summary h3 {
+    color: #4f46e5;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.achievement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.achievement-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #4f46e5;
+    margin-bottom: 0.5rem;
+}
+
+.achievement-label {
+    color: #6b7280;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* Footer */
+footer {
+    background: #374151;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+    border-radius: 20px 20px 0 0;
+}
+
+footer p {
+    font-size: 0.95rem;
+    font-weight: 300;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    header {
+        padding: 2rem 0;
+    }
+    
+    .description-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .portrait {
+        width: 220px;
+        height: 280px;
+        margin: 0 auto;
+    }
+    
+    .profile-section,
+    .work-section {
+        padding: 2rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    main {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .portrait {
+        width: 200px;
+        height: 250px;
+    }
+    
+    .project-header {
+        flex-direction: column;
+        align-items: start;
+        gap: 0.5rem;
+    }
+    
+    .achievements-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Animations */
+.profile-section,
+.work-section {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project-card {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover effects */
+.tech:hover {
+    background: #4f46e5;
+    color: white;
+    cursor: default;
+}
+
+/* Scroll smooth */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Amélioration du focus et de l'accessibilité */
+.filter-btn:focus {
+    outline: 3px solid rgba(79, 70, 229, 0.5);
+    outline-offset: 2px;
+}
+
+/* Animation de pulsation pour les réalisations */
+.achievement-number {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Effet de brillance sur les cartes de projet au survol */
+.project-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.project-card:hover::after {
+    left: 100%;
+}
+
+/* Animation de rotation pour les éléments tech */
+.tech {
+    position: relative;
+    overflow: hidden;
+}
+
+.tech::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+}
+
+.tech:hover::before {
+    width: 200%;
+    height: 200%;
+}
+
+/* Amélioration de l'effet de survol sur les réalisations */
+.achievement {
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.achievement:hover {
+    transform: translateY(-5px);
+}
+
+.achievement:hover .achievement-number {
+    color: #7c3aed;
+    transform: scale(1.1);
+}
+
+/* Style pour la barre de progression du scroll */
+.scroll-progress {
+    box-shadow: 0 2px 4px rgba(79, 70, 229, 0.2);
+}
+
+/* Amélioration du bouton de mode sombre */
+.dark-mode-toggle {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Animation pour l'apparition des éléments */
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Applliquer les animations alternées aux cartes de projet */
+.project-card:nth-child(odd) {
+    animation: slideInFromLeft 0.8s ease forwards;
+}
+
+.project-card:nth-child(even) {
+    animation: slideInFromRight 0.8s ease forwards;
+}
+
+/* Amélioration des transitions pour le mode sombre */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Style spécial pour les éléments en focus (accessibilité) */
+*:focus {
+    outline: 2px solid #4f46e5;
+    outline-offset: 2px;
+}
+
+/* Effet de zoom sur la photo de profil */
+.portrait {
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.portrait:hover {
+    transform: scale(1.05) rotate(2deg);
+}
+
+/* Amélioration de l'effet de hover sur les infos personnelles */
+.personal-info {
+    transition: all 0.3s ease;
+}
+
+.personal-info:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(79, 70, 229, 0.1);
+}
+
+/* Style pour les particules du header */
+.particles {
+    overflow: hidden;
+}
+
+/* Amélioration du footer avec un effet de vague */
+footer {
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTAwJyBoZWlnaHQ9JzIwJyB2aWV3Qm94PScwIDAgMTAwIDIwJyBmaWxsPSdub25lJyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnPjxwYXRoIGQ9J00wIDEwUzI1IDAgNTAgMTBTMTAwIDAgMTAwIDEwVjIwSDBWMTBaJyBmaWxsPScjZjdmOGZjJy8+PC9zdmc+') repeat-x;
+    transform: scaleY(-1);
+}
